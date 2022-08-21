@@ -34,6 +34,6 @@ class SentenceTokenizer():
     def get_meanings(self, word):
         return '\n'.join(self._lookup[word]['meanings']) if word in self._lookup else '[??????]'
 
-    def get_graph(self, sentence):
+    def get_svg_graph(self, sentence):
         doc = self._nlp(sentence)
-        return spacy.displacy.render(doc)
+        return spacy.displacy.render(doc, style='dep', jupyter=False)

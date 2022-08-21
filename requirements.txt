@@ -1,4 +1,5 @@
 spacy
 python-telegram-bot
 cedict-utils
-tabulate
+prettytable
+cairosvg
