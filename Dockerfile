@@ -1,7 +1,7 @@
 FROM python:3.10-slim-bullseye as base
 WORKDIR /app
 RUN apt-get update
-RUN apt-get upgrade -y --no-install-recommends build-essential gcc fonts-noto-cjk
+RUN apt-get upgrade -y --no-install-recommends build-essential gcc fonts-noto-cjk libcairo2
 
 FROM base as build
 RUN python -m venv ./venv
